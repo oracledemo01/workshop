@@ -18,7 +18,7 @@ apiVersion: extensions/v1beta1
 metadata:
   name: gorest-se
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -27,8 +27,8 @@ spec:
     spec:
       containers:
       - name: gorest-se
-        image:  abhinavshroff/gorest:1.0
-        imagePullPolicy: IfNotPresent
+        image:  sakthikuber/gorestapp:1.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 8093
 ---
